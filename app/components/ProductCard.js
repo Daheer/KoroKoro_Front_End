@@ -4,7 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import { AddShoppingCartIcon } from '@mui/icons-material/AddShoppingCart';
 import Canvas3D from "../components/Canvas3D";
 import CartCounter from "../components/CartCounter"
 import { getProductByID } from "../services/dataOps";
