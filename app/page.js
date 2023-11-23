@@ -49,7 +49,6 @@ export default function App() {
           boxShadow: '0 0.4rem 0.8rem rgba(0, 0, 0, 0.5);'
         },
       }}>View Products with your KoroKoro Eyes</Link>
-
     </div>
   )
 }

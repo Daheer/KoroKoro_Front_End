@@ -6,6 +6,10 @@ export const CircleStdFontStyle = CircleStdFont({ src: '../font/CircularStd-Book
 export const metadata = {
   title: 'KoroKoro',
   description: 'A novel way to view items for sale!',
+  icons: {
+    icon: '/view.png',
+  },
+  creator: 'Dahiru Ibrahim',
 }
 
 
