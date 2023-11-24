@@ -4,7 +4,7 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+// import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import Canvas3D from "../components/Canvas3D";
 import CartCounter from "../components/CartCounter"
 import { getProductByID } from "../services/dataOps";
@@ -130,7 +130,7 @@ export default async function ProductCard({ unique_id }) {
                   id={params.unique_id}
                   quantity={1}
                 />
-                <Button variant="outlined" sx={{ color: 'black', border: 'none', boxShadow: '0 0 0.05rem 0.1rem rgba(0, 0, 0, 0.4)', }} endIcon={<AddShoppingCartIcon />}>
+                <Button variant="outlined" sx={{ color: 'black', border: 'none', boxShadow: '0 0 0.05rem 0.1rem rgba(0, 0, 0, 0.4)', }} }>
                   BUY
                 </Button>
               </div>
