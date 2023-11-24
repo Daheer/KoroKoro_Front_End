@@ -130,7 +130,7 @@ export default async function ProductCard({ unique_id }) {
                   id={params.unique_id}
                   quantity={1}
                 />
-                <Button variant="outlined" sx={{ color: 'black', border: 'none', boxShadow: '0 0 0.05rem 0.1rem rgba(0, 0, 0, 0.4)', }} }>
+                <Button variant="outlined" sx={{ color: 'black', border: 'none', boxShadow: '0 0 0.05rem 0.1rem rgba(0, 0, 0, 0.4)' }}>
                   BUY
                 </Button>
               </div>
