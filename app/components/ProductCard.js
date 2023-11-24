@@ -10,7 +10,7 @@ import CartCounter from "../components/CartCounter"
 import { getProductByID } from "../services/dataOps";
 import { saveObj, getObjFileParts, downloadFile } from "../services/downloadOps";
 
-async function prepareObjFile(unique_id, obj_file_parts) {
+export async function prepareObjFile(unique_id, obj_file_parts) {
   const fs = require('fs');
   if (fs.existsSync(`public/${unique_id}/mesh.obj`) && fs.statSync(`public/${unique_id}/mesh.obj`).size > 0) {
     return `/${unique_id}/mesh.obj`;
@@ -37,8 +37,9 @@ export default async function ProductCard({ unique_id }) {
 
   if (params.status === 'DONE') {
     objectReady = true;
-    const obj_file_parts = await getObjFileParts(unique_id);
-    obj_file = await prepareObjFile(unique_id, obj_file_parts)
+    obj_file = `/${unique_id}/mesh.obj`;
+    // const obj_file_parts = await getObjFileParts(unique_id);
+    // obj_file = await prepareObjFile(unique_id, obj_file_parts)
   }
 
   return (
