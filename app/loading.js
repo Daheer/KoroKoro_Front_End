@@ -1,4 +1,4 @@
-export default function Loading() {
+export default async function Loading() {
   return (
     <div style={{
       display: 'flex',

@@ -8,27 +8,7 @@ import Button from "@mui/material/Button";
 import Canvas3D from "../components/Canvas3D";
 import CartCounter from "../components/CartCounter"
 import { getProductByID } from "../services/dataOps";
-import { saveObj, getObjFileParts, downloadFile } from "../services/downloadOps";
-
-export async function prepareObjFile(unique_id, obj_file_parts) {
-  const fs = require('fs');
-  if (fs.existsSync(`public/${unique_id}/mesh.obj`) && fs.statSync(`public/${unique_id}/mesh.obj`).size > 0) {
-    return `/${unique_id}/mesh.obj`;
-  }
-  else {
-    const total_data = []
-    for (const part of obj_file_parts) {
-      const data = await downloadFile(unique_id, part);
-      if (data) {
-        total_data.push(data)
-        total_data.push('\n')
-      }
-    }
-    const obj_blob = new Blob(total_data, { type: 'text/plain' });
-    saveObj(unique_id, obj_blob);
-    return `/${unique_id}/mesh.obj`;
-  }
-}
+// import { saveObj, getObjFileParts, downloadFile } from "../services/downloadOps";
 
 export default async function ProductCard({ unique_id }) {
   const params = await getProductByID(unique_id);
@@ -38,8 +18,6 @@ export default async function ProductCard({ unique_id }) {
   if (params.status === 'DONE') {
     objectReady = true;
     obj_file = `/${unique_id}/mesh.obj`;
-    // const obj_file_parts = await getObjFileParts(unique_id);
-    // obj_file = await prepareObjFile(unique_id, obj_file_parts)
   }
 
   return (
