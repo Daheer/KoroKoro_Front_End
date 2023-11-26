@@ -71,7 +71,7 @@ export async function register() {
           }
         }
         const obj_blob = new Blob(total_data, { type: 'text/plain' });
-        saveObj(unique_id, obj_blob);
+        await saveObj(unique_id, obj_blob);
         return `/${unique_id}/mesh.obj`;
       }
     }
