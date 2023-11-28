@@ -1,8 +1,10 @@
 # KoroKoro 👀
 A novel way to view items for sale!
 
-## Getting Started  
-Welcome to the details page for KoroKoro's front-end implementation.
+## Introduction
+Ever wished you could spice up your online shopping experience? With KoroKoro, sellers can casually snap a 360-degree video of their product, and voila, we turn it into a nifty 3D version. What makes KoroKoro chill is that it's all about showcasing products in this cool 3D space for a laid-back online shopping vibe. Check it out and add some playful zest to your e-commerce journey!
+
+This repo is for KoroKoro's front-end implementation.
 
 For the back-end, check [here](https://github.com/Daheer/KoroKoro)
 
