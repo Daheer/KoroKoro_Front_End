@@ -14,4 +14,4 @@ RUN npm run build
 
 EXPOSE 3000
 
-CMD ["echo", "Ready to Start KoroKoro!"]
+CMD ["tail", "-f", "/dev/null"]
